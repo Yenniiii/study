@@ -1,0 +1,26 @@
+#비밀번호 만들기
+#랜덤으로 만들어져서 기억을 못한다. 메모장에 저장
+# 눈으로 사이트의 주소와 비번
+# 사이트의 주소의 수
+import sys
+input=sys.stdin.readline
+n,m= map(int,input().split())
+id_passwd={}
+find_id=[]
+for i in range(n):
+    id,passwd=input().split()
+    id_passwd[id]=passwd
+
+#print(id_passwd)
+#{'noj.am': 'IU', 'acmicpc.net': 'UAENA', 'startlink.io': 'THEKINGOD', 'google.com': 'ZEZE', 'nate.com': 'VOICEMAIL', 'naver.com': 'REDQUEEN', 'daum.net': 'MODERNTIMES', 'utube.com': 'BLACKOUT', 'zum.com': 'LASTFANTASY', 'dreamwiz.com': 'RAINDROP', 'hanyang.ac.kr': 'SOMEDAY', 'dhlottery.co.kr': 'BOO', 'duksoo.hs.kr': 'HAVANA', 'hanyang-u.ms.kr': 'OBLIVIATE', 'yd.es.kr': 'LOVEATTACK', 'mcc.hanyang.ac.kr': 'ADREAMER'}  
+
+for j in range(m):
+    found=id_passwd[input().rstrip()]
+    print(f"답은:{found}")
+"""
+startlink.io
+답은:THEKINGOD
+acmicpc.net
+답은:UAENA
+noj.am
+답은:IU"""
